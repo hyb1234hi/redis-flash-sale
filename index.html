@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
 </head>
 <body>
     通过redis实现抢购功能
-    <form action="">
-        点击抢购
-    </form>
+    <button id="flash_sale">抢购</button>
+    <script>
+        $('#flash_sale').click(function(){
+            // 异步调用ajax接口，实现用户入队列
+//            $.ajax()
+          alert('抢购进行中。。。');
+        })
+    </script>
 </body>
 </html>
