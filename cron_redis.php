@@ -7,7 +7,7 @@
  */
 $redis = new Redis();
 $redis->connect('127.0.0.1',6379);
-//// 使用一个计划任务
+//// 使用一个计划任务每分钟执行
 //// 1.写一个堵塞的程序
 while(true){
     $user = $redis->brPop('user',59);
@@ -27,5 +27,8 @@ while(true){
 //        echo '没有库存了';
             }
         }
+    }else{
+        // 没有用户了就退出循环，免得消耗资源
+        break;
     }
 }
