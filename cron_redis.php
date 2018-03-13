@@ -9,8 +9,7 @@ $redis = new Redis();
 $redis->connect('127.0.0.1',6379);
 // 使用一个计划任务
 // 1.写一个堵塞的程序
-$rand = rand(0,1000);
-$user = $redis->rPop('user',$rand);
+$user = $redis->brPop('user',59);
 
 $re = $redis->sIsMember('result',$user);
 if($re){    // 已抢单过

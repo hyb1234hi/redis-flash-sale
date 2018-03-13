@@ -11,4 +11,5 @@ $redis = new Redis();
 // 查剩余库存量
 $redis->connect('127.0.0.1',6379);
 // 模拟前台下单的过程
-$redis->rPush('user',5);
+$rand = rand(1,1000);
+$redis->rPush('user',$rand);
