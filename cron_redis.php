@@ -17,7 +17,8 @@ while(true){
 //    echo '已经抢过单了';
         }else{  // 还没有抢单
             $store = $redis->rPop('store');
-            if($store){
+//            var_dump($store);
+            if($store !== false){
                 $redis->sAdd('result',$user[1]);
                 // 做数据库的操作
 //        echo '抢单成功';
