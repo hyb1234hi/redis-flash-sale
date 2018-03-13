@@ -27,5 +27,8 @@ while(true){
 //        echo '没有库存了';
             }
         }
+    }else{
+        // 没有用户就退出
+        break;
     }
 }

@@ -9,3 +9,4 @@
     初始化库存队列
   b.开启linux的计划任务，每分钟执行 cron_redis.php
   c.用ab命令测试并发  ab -c 1000 -n 10000 http://xxx.com/redis_in_user.php
+    亲测没有问题~
